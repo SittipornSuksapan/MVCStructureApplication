@@ -6,6 +6,16 @@
 
         android:title="@string/SecondFragment"
         app:showAsAction="never"/>
+    <item android:id="@+id/action_first_tab"
+
+        android:title="@string/firsttab"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_second_tab"
+
+        android:title="@string/secondtab"
+        app:showAsAction="never"/>
+
 
 
 
