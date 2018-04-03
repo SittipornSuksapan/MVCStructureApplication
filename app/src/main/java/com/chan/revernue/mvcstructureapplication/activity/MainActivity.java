@@ -6,9 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.chan.revernue.mvcstructureapplication.R;
 import com.chan.revernue.mvcstructureapplication.fragment.MainFragment;
+import com.chan.revernue.mvcstructureapplication.fragment.SecondFragment;
 import com.chan.revernue.mvcstructureapplication.util.ScreenUtils;
 
 public class MainActivity extends AppCompatActivity {
@@ -53,8 +55,15 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.action_second_fragment){
-            return true;
+        switch (item.getItemId()){
+            case R.id.action_second_fragment:
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.contentContainer, SecondFragment.newInstance())
+                        .commit();
+                Toast.makeText(MainActivity.this,
+                        "Second Fragment",Toast.LENGTH_SHORT)
+                        .show();
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }

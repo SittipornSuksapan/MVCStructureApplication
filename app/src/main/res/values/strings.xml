@@ -3,4 +3,5 @@
 
     <string name="settings">settings</string>
     <string name="SecondFragment">To Second Fragment</string>
+    <string name="i_am_the_second_fragment">I am the Second Fragment</string>
 </resources>
