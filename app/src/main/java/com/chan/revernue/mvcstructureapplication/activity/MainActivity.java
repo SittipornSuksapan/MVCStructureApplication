@@ -14,12 +14,16 @@ import com.chan.revernue.mvcstructureapplication.R;
 import com.chan.revernue.mvcstructureapplication.fragment.MainFragment;
 import com.chan.revernue.mvcstructureapplication.fragment.SecondFragment;
 import com.chan.revernue.mvcstructureapplication.util.ScreenUtils;
+import com.crashlytics.android.Crashlytics;
+
+import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
 
         int screenWidth = ScreenUtils.getInstance().getScreenWidth();
